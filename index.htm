@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>jsonTreeViewer</title>
+    <title>jsvTreeViewer</title>
     <meta charset="utf-8" />
     
     <link href="libs/app/reset.css" rel="stylesheet" />
     <link href="libs/app/app.css" rel="stylesheet" />
     <link href="libs/jsonTree/jsonTree.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+    <link href="treeViewer.css" rel="stylesheet">
     
     <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
     <!--
@@ -28,8 +29,8 @@
     <!-- Buttons -->
     <header id="header">
         <h1 id="logo">
-            <a href="http://github.com/summerstyle/jsonTreeViewer">
-                jsonTreeViewer
+            <a href="https://github.com/vsong/jsvTreeViewer">
+                jsvTreeViewer
             </a>
         </h1>
         <nav id="nav" class="clearfix">
@@ -102,8 +103,7 @@
                 </p>
             </section>
             <footer>
-                <a href="http://github.com/summerstyle/jsonTreeViewer">jsonTreeViewer</a><br />
-                &copy; 2017 Vera Lobacheva<br />
+                <a href="https://github.com/vsong/jsvTreeViewer">jsvTreeViewer</a><br />
                 MIT License
             </footer>
         </div>
@@ -191,7 +191,8 @@
 
     <!-- For source JSON -->
     <div class="code" id="source_json" data-header="Source JSON"></div>
-    
+
+    <script src="libs/jsv-5.4.1.js"></script>
     <script src="libs/app/App.js"></script>
     <script src="libs/jsonTree/jsonTree.js"></script>
     <script src="jsonTreeViewer.js"></script>

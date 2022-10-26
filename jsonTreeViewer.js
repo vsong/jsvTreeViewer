@@ -1,11 +1,3 @@
-/*
- * JSON Tree Viewer
- * http://github.com/summerstyle/jsonTreeViewer
- *
- * Copyright 2017 Vera Lobacheva (http://iamvera.com)
- * Released under the MIT license (LICENSE.txt)
- */
-
 'use strict';
 
 var jsonTreeViewer = (function() {
@@ -43,6 +35,12 @@ var jsonTreeViewer = (function() {
         } 
     });
 
+    var parse_jsv = (jsv) => {
+        if (jsv.startsWith('"') && jsv.endsWith('"')) {
+            jsv = jsv.substring(1, jsv.length - 1);
+        }
+        return JSV.parse(jsv);
+    }
 
     /* Load json form */
     var load_json_form = new App.Window({
@@ -54,7 +52,8 @@ var jsonTreeViewer = (function() {
                 load_button = document.getElementById('load_code_button');
             
             function load(e) {
-                jsonTreeViewer.parse(code_input.value);
+                const data = parse_jsv(code_input.value);
+                tree.loadData(data);
                 self.hide();
                 code_input.value = '';
             

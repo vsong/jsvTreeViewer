@@ -1,11 +1,3 @@
-/*
- * JSON Tree Viewer
- * http://github.com/summerstyle/jsonTreeViewer
- *
- * Copyright 2017 Vera Lobacheva (http://iamvera.com)
- * Released under the MIT license (LICENSE.txt)
- */
-
 /* Background for the tree. May use for <body> element */
 .jsontree_bg {
     background: #FFF;
@@ -21,7 +13,7 @@
 /* Styles for a list of child nodes */
 .jsontree_child-nodes {
     display: none;
-    margin-left: 35px; 
+    margin-left: 45px;
     margin-bottom: 5px;
     line-height: 2;
 }
